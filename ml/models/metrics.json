@@ -1,0 +1,11 @@
+{
+  "validation_mae_kbps": 602.81,
+  "test_mae_kbps": 617.5,
+  "test_rmse_kbps": 974.99,
+  "persistence_baseline_mae_kbps": 737.9,
+  "train_samples": 46550,
+  "validation_samples": 9975,
+  "test_samples": 9975,
+  "dataset": "Synthetic traces; disjoint trace seeds across splits",
+  "model": "HistGradientBoostingRegressor"
+}

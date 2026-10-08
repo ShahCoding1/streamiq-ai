@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    environment:
+      - DATABASE_URL=sqlite:////app/data/streamiq.db
+      - CORS_ORIGINS=http://localhost:8080
+    volumes:
+      - streamiq_data:/app/data
+    ports:
+      - "8000:8000"
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+volumes:
+  streamiq_data:
